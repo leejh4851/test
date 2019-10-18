@@ -1,0 +1,8 @@
+@charset "UTF-8";
+li a {
+    color: green;
+}
+body {
+    background: white url("images/background.jpg") no-repeat;
+    background-size: cover; /* contain, cover 로 설정하면 어찌될까요?*/
+}

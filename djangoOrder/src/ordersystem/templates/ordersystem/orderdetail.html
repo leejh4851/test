@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+<!-- 
+    unique_together = (('orderCode','id'),)
+    orderCode = models.CharField(max_length=20) 
+    orderDay = models.DateTimeField(auto_now_add=True, blank=True)
+    destinationId = models.ForeignKey(Destination,on_delete=models.CASCADE) #>>>> FK
+    goodId = models.ForeignKey(Goods,on_delete=models.CASCADE)
+    qty = models.IntegerField(default=0)
+    
+ -->
+<div class="container" align="center">
+	<h1>주문정보(orderdetail.html)</h1>
+	<table class="table">
+		<tr>
+			<th>관리번호</th>
+			<td>{{order.id}}</td>
+		</tr>
+		<tr>
+			<th>주문코드</th>
+			<td>{{order.orderCode}}</td>
+		</tr>
+
+		<tr>
+			<th>주문일자</th>
+			<td>{{order.orderDay}}</td>
+		</tr>
+		<tr>
+			<th>배송처아이디</th>
+			<td>{{order.destinationId}}</td>
+		</tr>
+		<tr>
+			<th>상품아이디</th>
+			<td>{{order.goodId}}</td>
+		</tr>
+		<tr>
+			<th>주문수량</th>
+			<td>{{order.qty}}</td>
+		</tr>
+	</table>
+	<button type="button" class="btn btn-primary"
+		onclick="location.href='/ordersystem/orderlist'">목록</button>
+</div>
+{% endblock content %}

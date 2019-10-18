@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block content %}
+<style type="text/css">
+.jumbotron {
+	background-image: url('/static/images/jumbotronBackground2.jpg');
+	background-size: contain;
+	text-shadow: black 0.5em 0.5em 0.5em;
+	color: yellow;
+}
+</style>
+
+<!-- 자세히 알아보기에서 활용할 모달창  -->
+<div class="modal" id="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">코딩 부스터의 특징</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					저희 서비스의 특징은 바로 인터넷 강의를 들을 수 있다는 점입니다. <br> 특히 다양한 무료 강의가 유튜브와
+					연동되어 제공됩니다.<br> <br> <img
+						src="/static/images/LOGOBIG.png" id="imagepreview"
+						style="width: 256px; height: 256px;">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">&times;</button>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</head>
+
+<body id="start">
+	<div id="header_div"></div>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">주문관리시스템(쇼핑몰SUB시스템)</h1>
+			<p class="text-center">파이썬/장고프레임웤을 이용한 통합시스템구현</p>
+			<p class="text-center">
+				<a class="btn btn-primary btn-lg" href="/ordersystem/orderwrite/" role="button">주문하러가기</a>
+			</p>
+			
+			<p class="text-center">
+				<a class="btn btn-primary btn-lg" href="/ordersystem/goodslist/" role="button">상품보기</a>
+			</p>
+		</div>
+				<div class="row">
+			<div class="col-md-4">
+				<h4>우리 사이트의 특징</h4>
+				<p>우리 사이트는 다른 사이트와 차원이 다른 깔끔한 구성을 보여줍니다. 모든 페이지가 사용자가 접근하고 읽기
+					쉽도록 정교하게 구성되었습니다.</p>
+				<p>
+					<a class="btn btn-light" data-target="#modal" data-toggle="modal">자세히
+						알아보기</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h4>폭넓은 강사진</h4>
+				<p>본 사이트는 정말로 뛰어난 개발자만을 강사진으로 구성되어있습니다. 각각의 강사진은 현직 개발 자경험 및 교직 이수 한 선생님들 위주로
+					처음 접하는 학생에게 친절하게 알려줍니다.</p>
+				<p>
+					<a class="btn btn-light" href="#">자세히 알아보기</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h4>핵심적인 강의</h4>
+				<p>강의는 실제 개발에 있어서 반드시 필요한 핵심적인 내용을 중심으로 다룹니다. 강의를 듣는 시간 내내 요약된
+					정보를 온전히 받아들일 수 있습니다. 스스로 학습하는 방법을 제시합니다.</p>
+				<p>
+					<a class="btn btn-light" href="#">자세히 알아보기</a>
+				</p>
+			</div>
+		</div>
+		<hr>
+		<div class="alert alert-primary" role="alert">
+			<i class="fas fa-pencil-alt"></i> &nbsp;&nbsp; 최신 강의 목록
+		</div>
+		<div class="card-group">
+			<div class="card" style="width: 15rem;">
+				<img src="/static/images/CLang.png" style="width: 256px; height: 256px;"
+					class="card-img-top" alt="NANI">
+				<div class="card-body">
+					<h5 class="card-title">
+						파이썬 기초 프로그래밍 강의<span class="badge badge-secondary">New</span>
+					</h5>
+					<p class="card-text">
+						파이썬 강의는 기초 프로그래밍 강의입니다. <br>처음 프로그래밍을 접하는 입문자가 듣기에 적합한 강의입니다.<br>
+						강의료는 무료이며 파이썬 기초 프로그래밍 강의는 총 70강으로 구성됩니다.
+					</p>
+				</div>
+			</div>
+			<div class="card" style="width: 15rem;">
+				<img src="/static/images/java.png" style="width: 256px; height: 256px;"
+					class="card-img-top" alt="NANI">
+				<div class="card-body">
+					<h5 class="card-title">
+						Java 기초 프로그래밍 강의<span class="badge badge-secondary">New</span>
+					</h5>
+					<p class="card-text">
+						Java 강의는 객체 지향 프로그래밍의 기본을 강의입니다. <br>처음 프로그래밍을 접하는 입문자가 듣기에
+						적합한 강의입니다.<br> 강의료는 무료이며Java 기초 프로그래밍 강좌는 총 30강으로 구성됩니다.
+					</p>
+				</div>
+			</div>
+			<div class="card" style="width: 15rem;">
+				<img src="/static/images/android.png" style="width: 256px; height: 256px;"
+					class="card-img-top" alt="NANI">
+				<div class="card-body">
+					<h5 class="card-title">
+						안드로이드 스튜디오 활용 강의<span class="badge badge-secondary">New</span>
+					</h5>
+					<p class="card-text">
+						안드로이드 강의는 Java를 화용하여 안드로이드 애플리케이션을 개발하는 강의입니다.<br> 속도감 있는 강의로
+						앱 개발 입문자가 빠르게 앱을 만들어보면서 기본 개념을 탄탄히 다지도록 합니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock content %}

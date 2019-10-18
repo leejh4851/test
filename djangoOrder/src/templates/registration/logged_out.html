@@ -1,0 +1,9 @@
+<!-- 
+이 템플릿 이름은 항상 logged_out.html 이어야 한다. 
+파일이름은 장고 소스의 auth.views.logout()을 보면 확인할 수 있다
+-->
+{% extends 'base.html' %}
+{% block content %}
+<h2> 잘 가요, 안녕. </h2>
+<p><a href="{%url 'login'%}">다시 로그인하기</a></p>
+{% endblock content %}

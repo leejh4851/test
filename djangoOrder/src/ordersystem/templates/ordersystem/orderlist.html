@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="container" align="center">
+		<h1>주문서목록(orderlist.html)</h1>
+		<table id="example" class="table table-striped table-bordered"
+			style="width: 100%">
+			<thead>
+				<th>주문일련번호</th>
+				<th>주문코드</th>
+				<th>주문일시</th>
+				<th>배송처</th>
+				<th>상품번호</th>
+				<th>주문수량</th>
+			</thead>
+			<tbody>
+				{% for order in orderList %}
+				<tr>
+					<td><a href="/ordersystem/view/{{order.id}}">{{order.id}}</a></td>
+					<td>{{order.orderCode}}</td>
+					<td>{{order.orderDay|date:"D d M Y"}}</td>
+					<td>{{order.destinationId.address}}&nbsp;{{order.destinationId.detailAddress}}</td>
+					<td>{{order.goodId}}</td>
+					<td>{{order.qty}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			<tfooter>
+			<th>주문일련번호</th>
+				<th>주문코드</th>
+				<th>주문일시</th>
+				<th>배송처id</th>
+				<th>상품번호</th>
+				<th>주문수량</th>
+			</tfooter>
+
+		</table>
+		<button type="button" class="btn btn-primary"
+			onclick="location.href='/ordersystem/orderwrite'">글쓰기</button>
+	</div>
+	{% endblock content %}

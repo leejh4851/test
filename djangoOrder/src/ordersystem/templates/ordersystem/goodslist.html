@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="container" align="center">
+		<h1>쇼핑상품정보(goodslist.html)</h1>
+		<table id="example" class="table table-striped table-bordered"
+			style="width: 100%">
+			<thead>
+				<th>상품아이디</th>
+				<th>상품이름</th>
+				<th>상품분류</th>
+				<th>주문단위</th>
+				<th>판매업체</th>
+
+			</thead>
+			<tbody>
+				{% for good in goodsList %}
+				<tr>
+					<td>{{good.id}}</td>
+					<td>{{good.goodName}}</td>
+					<td>{{good.classification}}</td>
+					<td>{{good.orderUnit}}</td>
+					<td>{{good.enterprise_id.enterprise_name}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			<tfooter>
+			<th>상품아이디</th>
+				<th>상품이름</th>
+				<th>상품분류</th>
+				<th>주문단위</th>
+				<th>판매업체</th>
+			</tfooter>
+
+		</table>
+		<button type="button" class="btn btn-primary"
+			onclick="location.href='/ordersystem/orderwrite'">주문하기</button>
+	</div>
+	{% endblock content %}
